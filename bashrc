@@ -35,3 +35,4 @@ export cl=~/ownCloud/Shared/Palante*Shared/Current*Projects
 function me() {
     echo "hextile" | ssvncviewer -scale .8 -autopass -encodings "zywrle tight hextile copyrect" B1RNML2 &> /dev/null &
 }
+export TERM=xterm-256color

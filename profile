@@ -20,3 +20,6 @@ fi
 #if [ -d "$HOME/bin" ] ; then
 #    PATH="$HOME/bin:$PATH:~/local/civix/"
 #fi
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
