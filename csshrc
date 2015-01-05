@@ -1,0 +1,7 @@
+clusters = msp nonmsp pt all debianupdates
+
+msp = alp srlp lm nyoc rff vocal
+nonmsp = alpbrk ajmuste caaav cpr damayan fierce furee gap nedap nlg nycfnac pth pttv sas wrl 
+pt = dev2 hq storage ramen bagel octavia
+all = msp nonmsp pt
+debianupdates = alp alpbrk ajmuste caaav cpr damayan furee gap goles nedap nlg nycfnac nyoc sas srlp vocal wrl lm
