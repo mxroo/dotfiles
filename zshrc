@@ -122,6 +122,10 @@ cat ~/Downloads/issues.csv | sed "s/,/qz/" | sed "s/,/\ -\  /" | sed "s/qz/,/g" 
 rm ~/Downloads/issues.csv
 }
 
-if [[ -r /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-    source /usr/local/lib/python2.7/dist-packages/powerline/bindings/zsh/powerline.zsh
+if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
+    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
 fi
+if [ -d "$HOME/.local/bin" ]; then
+    PATH="$HOME/.local/bin:$PATH"
+fi
+
