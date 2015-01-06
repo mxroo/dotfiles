@@ -17,7 +17,7 @@ antigen bundle screen
 antigen bundle zsh-users/zsh-syntax-highlighting
 
 # Load the theme.
-antigen theme agnoster
+ antigen bundle sindresorhus/pure
 
 # Tell antigen that you're done.
 antigen apply
