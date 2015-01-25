@@ -6,7 +6,8 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle debian
-antigen bundle vagrant
+#antigen bundle vagrant
+antigen bundle docker
 antigen bundle tmux
 antigen bundle command-not-found
 antigen bundle sublime

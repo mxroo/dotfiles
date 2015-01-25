@@ -22,6 +22,7 @@ Bundle 'rking/ag.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'slim-template/vim-slim'
+Plugin 'ingydotnet/yaml-vim'
 
 filetype plugin indent on
 
