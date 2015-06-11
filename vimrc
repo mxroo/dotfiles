@@ -1,118 +1,65 @@
+
 set nocompatible
 filetype off
-
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#rc()
-
-" Let Vundle manage Vundle
-Bundle 'gmarik/vundle'
-
-" My Bundles
-Bundle 'tpope/vim-sensible'
-Bundle 'tpope/vim-surround'
+" This is all Plugin stuff
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+" This makes vim pretty colors
+Plugin 'altercation/vim-colors-solarized'
+"Filebrowser for Vim
+Plugin 'scrooloose/nerdtree'
+"fuzzy file finder
+Plugin 'kien/ctrlp.vim'
+"git wrapper
 Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-rails'
-Bundle 'tpope/vim-rake'
-Bundle 'nanotech/jellybeans.vim'
-Bundle 'Lokaltog/vim-powerline'
-Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
-Bundle 'kien/ctrlp.vim'
-Bundle 'rking/ag.vim'
-Bundle 'kana/vim-textobj-user'
-Bundle 'nelstrom/vim-textobj-rubyblock'
-Bundle 'slim-template/vim-slim'
-Plugin 'ingydotnet/yaml-vim'
+" puppet syntax plugin
+Bundle 'puppetlabs/puppet-syntax-vim'
+"nerdtree tabs plugin
+Bundle 'jistr/vim-nerdtree-tabs'
+"Pretty and useful buffer line
+Plugin 'bling/vim-airline'
 
+call vundle#end()
 filetype plugin indent on
-
-let mapleader=","
-
-"color jellybeans
-
+"that is the end of plugin stuff
+"set cursor to never reach bottom
 set cursorline
-set expandtab
-set modelines=0
-set shiftwidth=2
-set clipboard=unnamed
-set synmaxcol=128
-set ttyscroll=10
-set encoding=utf-8
-set tabstop=2
-set nowrap
 set number
-set expandtab
-set nowritebackup
-set noswapfile
-set nobackup
-set hlsearch
+let mapleader=","
 set ignorecase
 set smartcase
+set scrolloff=5
+set backspace=indent,eol,start
+set hlsearch
+set incsearch
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set smarttab
+set ruler
+set showtabline=2
+"do not real tab only space
+set softtabstop=4
+set autoindent
+set laststatus=2
+"sets tab character and trailing dot
+set list listchars=tab:»·,trail:·,extends:$,nbsp:=
+"puppet setttings
+autocmd Filetype puppet setlocal shiftwidth=2 softtabstop=2 tabstop=2
+map ` <Nop>
 
-" Automatic formatting
-autocmd BufWritePre *.rb :%s/\s\+$//e
-autocmd BufWritePre *.go :%s/\s\+$//e
-autocmd BufWritePre *.haml :%s/\s\+$//e
-autocmd BufWritePre *.html :%s/\s\+$//e
-autocmd BufWritePre *.scss :%s/\s\+$//e
-autocmd BufWritePre *.slim :%s/\s\+$//e
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#show_buffers = 0
+let g:airline#extensions#tabline#tab_nr_type = 1 " tab number
+"backup what you are working on here
+set backupdir=~/.vim/backup
+set directory=~/.vim/backup
 
-au BufNewFile * set noeol
-au BufRead,BufNewFile *.go set filetype=go
+set guioptions=
+syntax enable
 
-" No show command
-autocmd VimEnter * set nosc
-
-" Quick ESC
-imap jj <ESC>
-
-" Jump to the next row on long lines
-map <Down> gj
-map <Up>   gk
-nnoremap j gj
-nnoremap k gk
-
-" format the entire file
-nmap <leader>fef ggVG=
-
-" Open new buffers
-nmap <leader>s<left>   :leftabove  vnew<cr>
-nmap <leader>s<right>  :rightbelow vnew<cr>
-nmap <leader>s<up>     :leftabove  new<cr>
-nmap <leader>s<down>   :rightbelow new<cr>
-
-" Tab between buffers
-noremap <tab> <c-w><c-w>
-
-" Switch between last two buffers
-nnoremap <leader><leader> <C-^>
-
-" Resize buffers
-if bufwinnr(1)
-  nmap Ä <C-W><<C-W><
-  nmap Ö <C-W>><C-W>>
-  nmap ö <C-W>-<C-W>-
-  nmap ä <C-W>+<C-W>+
-endif
-
-" NERDTree
-nmap <leader>n :NERDTreeToggle<CR>
-let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
-
-" Syntastic
-let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_ruby_exec = '~/.rvm/rubies/ruby-2.0.0-p0/bin/ruby'
-
-" CtrlP
-nnoremap <silent> t :CtrlP<cr>
-let g:ctrlp_working_path_mode = 2
-let g:ctrlp_by_filename = 1
-let g:ctrlp_max_files = 600
-let g:ctrlp_max_depth = 5
-
-" Go programming
-set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
-
-" Quit with :Q
-command -nargs=0 Quit :qa!
+map <Leader>t :NERDTreeTabsToggle<CR>
+map <Leader>b :CtrlPBuffer<CR>

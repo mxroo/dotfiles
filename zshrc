@@ -16,7 +16,7 @@ antigen bundle sudo
 antigen bundle screen
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
-
+antigen bundle mafredri/zsh-async
 # Load the theme.
  antigen bundle sindresorhus/pure
 
