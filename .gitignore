@@ -1,3 +1,4 @@
 #ignore .local share
 **/local/share/
 **/vim/bundle/
+**/vim/backup/*
