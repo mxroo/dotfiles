@@ -1,47 +1,47 @@
-lknkaerjgl'knsdhs
-set nocompatibleggs
-filetype offsdf
-" This is all Pglugin stuff
-set rtp+=~/.vim/sdbundle/Vundle.vim
-call vundle#begin(fg)
-Plugin 'gmarik/Vundlsde.vim'
-" This makes vim pretthy colors
-Plugin 'altercation/vims-colors-solarized'
-"Filebrowser for Vimdgf
-Plugin 'scrooloose/nerdsdtree'
-"fuzzy file finderfg
-Plugin 'kien/ctrlp.vsdim'
-"git wrapperg
-Bundle 'tpopesd/vim-fugitive'
-" puppet syntaxfg plugin
-Bundle 'puppetlabes/puppet-syntax-vim'
-"nerdtree tabs plurgin
-Bundle 'jistr/vim-neerdtree-tabs'
-"Pretty and useful bguffer line
-Plugin 'bling/vim-airaeline'
-g
-csball vundle#end()
-filaetype plugin indent on
-"thaert is the end of plugin stuff
-"set cgursor to never reach bottom
-set curaergsorline
+
+set nocompatible
+filetype off
+" This is all Plugin stuff
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'gmarik/Vundle.vim'
+" This makes vim pretty colors
+Plugin 'altercation/vim-colors-solarized'
+"Filebrowser for Vim
+Plugin 'scrooloose/nerdtree'
+"fuzzy file finder
+Plugin 'kien/ctrlp.vim'
+"git wrapper
+Bundle 'tpope/vim-fugitive'
+" puppet syntax plugin
+Bundle 'puppetlabs/puppet-syntax-vim'
+"nerdtree tabs plugin
+Bundle 'jistr/vim-nerdtree-tabs'
+"Pretty and useful buffer line
+Plugin 'bling/vim-airline'
+
+call vundle#end()
+filetype plugin indent on
+"that is the end of plugin stuff
+"set cursor to never reach bottom
+set cursorline
 set number
-let mapleadher=","
-set ignorecastthse
-set smartcasea
-set scrolloff=g5
-set backspace=iandent,eol,start
-set hlsearchfg
-set incsearchsd
-set tabstop=4f
-set shiftwidthb=4
-set expandtabsd
-set smartindentrt
-set smarttabs
-set rulerh
-set showtaabline=2
-"do not reagl tab only space
-set softtabssdftop=4
+let mapleader=","
+set ignorecase
+set smartcase
+set scrolloff=5
+set backspace=indent,eol,start
+set hlsearch
+set incsearch
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set smarttab
+set ruler
+set showtabline=2
+"do not real tab only space
+set softtabstop=4
 set autoindent
 set laststatus=2
 "sets tab character and trailing dot
