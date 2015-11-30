@@ -11,7 +11,7 @@ antigen bundle docker
 antigen bundle tmux
 antigen bundle command-not-found
 antigen bundle sublime
-antigen bundle ruby
+#antigen bundle ruby
 antigen bundle sudo
 antigen bundle screen
 # Syntax highlighting bundle.
@@ -28,7 +28,7 @@ export PATH="/home/jessie/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+ export LANG=en_US.UTF-8
 alias vi=vim
  #Preferred editor for local and remote sessions
  if [[ -n $SSH_CONNECTION ]]; then
@@ -36,6 +36,8 @@ alias vi=vim
  else
    export EDITOR='vim'
  fi
+
+export TERM=xterm-256color
 
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
@@ -75,10 +77,6 @@ function crg() {
 }
 
 
-function me() {
-    echo "hextile" | ssvncviewer -scale .8 -autopass -encodings "zywrle tight hextile copyrect" B1RNML2 &> /dev/null &
-}
-export TERM=xterm-256color
 
 function today()
 {
@@ -86,18 +84,14 @@ cat ~/Downloads/issues.csv | sed "s/,/qz/" | sed "s/,/\ -\  /" | sed "s/qz/,/g" 
 rm ~/Downloads/issues.csv
 }
 
-#if [[ -r ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh ]]; then
-#    source ~/.local/lib/python2.7/site-packages/powerline/bindings/zsh/powerline.zsh
-#fi
 if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
 function ssh()
 {
-    /usr/bin/ssh "$@"
-        if ["$?" -eq 255 ]; then
-            /usr/bin/ssh -F ~/ownCloud/Palante\ Tech\ Shared/SSH\ Keys/config_files/ssh_config "$@" 
-        fi
-    }
-
+      /usr/bin/ssh $@
+        if [ "$?" -eq 255 ]; then
+                /usr/bin/ssh -F ~/ownCloud/Palante\ Tech\ Shared/SSH\ Keys/config_files/ssh_config "$@"
+                  fi
+              }
