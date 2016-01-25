@@ -52,7 +52,7 @@ function o()
 
 function chc()
 {
-    xdg-open "$HOME/ownCloud/Palante Tech Shared/Administrative/Bookkeeping/hours worked charts 2015.ods"
+    xdg-open "$HOME/ownCloud/Palante Tech Shared/Administrative/Bookkeeping/hours worked charts 2016.ods"
 }
 
 function cr()
@@ -87,6 +87,14 @@ if [ -d "$HOME/.local/bin" ]; then
     PATH="$HOME/.local/bin:$PATH"
 fi
 
+function sslcheck()
+{
+    echo | openssl s_client -connect $@ 2>/dev/null | openssl x509 -noout -issuer -subject -dates
+}
+function sslexpire()
+{
+    echo | openssl s_client -connect $@ 2>/dev/null | openssl x509 -noout -dates
+}
 function ssh()
 {
       /usr/bin/ssh $@
