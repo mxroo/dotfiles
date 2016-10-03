@@ -19,7 +19,8 @@ Bundle 'puppetlabs/puppet-syntax-vim'
 Bundle 'jistr/vim-nerdtree-tabs'
 "Pretty and useful buffer line
 Plugin 'bling/vim-airline'
-
+" Ansible development plugin
+Plugin 'MicahElliott/Rocannon'
 call vundle#end()
 filetype plugin indent on
 "that is the end of plugin stuff

@@ -24,9 +24,9 @@ antigen bundle mafredri/zsh-async
 antigen apply
 # User configuration
 
-export PATH="/home/jessie/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games"
+export PATH="/home/jessie/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin/:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
-
+PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # You may need to manually set your language environment
  export LANG=en_US.UTF-8
 alias vi=vim
@@ -36,7 +36,7 @@ alias vi=vim
  else
    export EDITOR='vim'
  fi
-
+export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export TERM=xterm-256color
 
 # Compilation flags
@@ -44,7 +44,7 @@ export TERM=xterm-256color
 
 # ssh
  export SSH_KEY_PATH="~/.ssh/id_rsa"
-
+alias startx='ssh-agent startx'
 function o()
 {
     xdg-open "$1"
@@ -67,7 +67,7 @@ function cro()
 }
 
 function cre() {
-    gpg -eso "$HOME/ownCloud/Palante Tech Shared/Credentials/"$1'_credentials.txt.gpg' -r 2614802205808E10 -r 05431C1FC47B97F5 -r 0A279E082B64B3CA -r 0DC025928E9AA851 -r C1983031ABC56AB1 -r A5C77224F7958C93  '/tmp/'$1'_credentials.txt'
+    gpg -eso "$HOME/ownCloud/Palante Tech Shared/Credentials/"$1'_credentials.txt.gpg' -r A8D94288FBC3B3AB -r 2614802205808E10 -r 05431C1FC47B97F5 -r 0A279E082B64B3CA -r 0DC025928E9AA851 -r C1983031ABC56AB1 -r A5C77224F7958C93  '/tmp/'$1'_credentials.txt'
       rm /tmp/*_credentials.txt
 }
 
@@ -97,8 +97,18 @@ function sslexpire()
 }
 function ssh()
 {
-      /usr/bin/ssh $@
-        if [ "$?" -eq 255 ]; then
-                /usr/bin/ssh -F ~/ownCloud/Palante\ Tech\ Shared/SSH\ Keys/config_files/ssh_config "$@"
-                  fi
-              }
+    ssh-combine; /usr/bin/ssh $@
+}
+function rsync()
+{
+    ssh-combine; /usr/bin/rsync $@
+}
+function scp()
+{
+    ssh-combine; /usr/bin/scp "$@"
+}
+function ssh-combine()
+{
+    cat $HOME/.ssh/config.d/* > $HOME/.ssh/config
+}
+
