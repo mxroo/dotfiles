@@ -1,5 +1,5 @@
 source /home/jessie/.antigen/antigen.zsh
-
+export SSH_ASKPASS="/usr/bin/ksshaskpass"
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
@@ -24,7 +24,7 @@ antigen bundle mafredri/zsh-async
 antigen apply
 # User configuration
 
-export PATH="/home/jessie/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin/:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl"
+export PATH="/home/jessie/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin/:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # export MANPATH="/usr/local/man:$MANPATH"
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # You may need to manually set your language environment
@@ -38,7 +38,7 @@ alias vi=vim
  fi
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export TERM=xterm-256color
-
+alias holdmybeer='sudo -sE'
 # Compilation flags
 # export ARCHFLAGS="-arch x86_64"
 
@@ -52,7 +52,7 @@ function o()
 
 function chc()
 {
-    xdg-open "$HOME/ownCloud/Palante Tech Shared/Administrative/Bookkeeping/hours worked charts 2016.ods"
+    xdg-open "$HOME/ownCloud/Palante Tech Shared/Administrative/Bookkeeping/hours worked charts 2017.ods"
 }
 
 function cr()
@@ -67,7 +67,7 @@ function cro()
 }
 
 function cre() {
-    gpg -eso "$HOME/ownCloud/Palante Tech Shared/Credentials/"$1'_credentials.txt.gpg' -r A8D94288FBC3B3AB -r 2614802205808E10 -r 05431C1FC47B97F5 -r 0A279E082B64B3CA -r 0DC025928E9AA851 -r C1983031ABC56AB1 -r A5C77224F7958C93  '/tmp/'$1'_credentials.txt'
+    gpg -eso "$HOME/ownCloud/Palante Tech Shared/Credentials/"$1'_credentials.txt.gpg' -r A8D94288FBC3B3AB -r 2614802205808E10 -r 05431C1FC47B97F5 -r 0A279E082B64B3CA -r C1983031ABC56AB1 -r A5C77224F7958C93  '/tmp/'$1'_credentials.txt'
       rm /tmp/*_credentials.txt
 }
 
