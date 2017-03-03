@@ -1,5 +1,4 @@
-source /home/jessie/.antigen/antigen.zsh
-export SSH_ASKPASS="/usr/bin/ksshaskpass"
+source $HOME/.antigen/antigen.zsh
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
 
@@ -8,7 +7,6 @@ antigen bundle git
 antigen bundle debian
 antigen bundle tmux
 antigen bundle command-not-found
-antigen bundle sublime
 antigen bundle sudo
 antigen bundle screen
 # Syntax highlighting bundle.
@@ -21,7 +19,6 @@ antigen bundle mafredri/zsh-async
 antigen apply
 # User configuration
 
-export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin/:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # You may need to manually set your language environment
  export LANG=en_US.UTF-8
 alias vi=vim
