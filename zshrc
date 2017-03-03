@@ -6,12 +6,9 @@ antigen use oh-my-zsh
 # Bundles from the default repo (robbyrussell's oh-my-zsh).
 antigen bundle git
 antigen bundle debian
-#antigen bundle vagrant
-antigen bundle docker
 antigen bundle tmux
 antigen bundle command-not-found
 antigen bundle sublime
-#antigen bundle ruby
 antigen bundle sudo
 antigen bundle screen
 # Syntax highlighting bundle.
@@ -24,9 +21,7 @@ antigen bundle mafredri/zsh-async
 antigen apply
 # User configuration
 
-export PATH="/home/jessie/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin/:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl"
-# export MANPATH="/usr/local/man:$MANPATH"
-PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
+export PATH="$HOME/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin/:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl"
 # You may need to manually set your language environment
  export LANG=en_US.UTF-8
 alias vi=vim
@@ -39,8 +34,6 @@ alias vi=vim
 export SSH_AUTH_SOCK="$XDG_RUNTIME_DIR/ssh-agent.socket"
 export TERM=xterm-256color
 alias holdmybeer='sudo -sE'
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
 
 # ssh
  export SSH_KEY_PATH="~/.ssh/id_rsa"
