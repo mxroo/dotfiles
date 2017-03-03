@@ -13,8 +13,6 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
 "git wrapper
 Bundle 'tpope/vim-fugitive'
-" puppet syntax plugin
-Bundle 'puppetlabs/puppet-syntax-vim'
 "nerdtree tabs plugin
 Bundle 'jistr/vim-nerdtree-tabs'
 "Pretty and useful buffer line
@@ -47,8 +45,6 @@ set autoindent
 set laststatus=2
 "sets tab character and trailing dot
 set list listchars=tab:»·,trail:·,extends:$,nbsp:=
-"puppet setttings
-autocmd Filetype puppet setlocal shiftwidth=2 softtabstop=2 tabstop=2
 map ` <Nop>
 
 let g:airline_powerline_fonts = 1
