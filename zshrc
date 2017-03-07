@@ -67,7 +67,7 @@ function cro()
 }
 
 function cre() {
-    gpg -eso "$HOME/ownCloud/Palante Tech Shared/Credentials/"$1'_credentials.txt.gpg' -r A8D94288FBC3B3AB -r 2614802205808E10 -r 05431C1FC47B97F5 -r 0A279E082B64B3CA -r C1983031ABC56AB1 -r A5C77224F7958C93  '/tmp/'$1'_credentials.txt'
+    gpg -eso "$HOME/ownCloud/Palante Tech Shared/Credentials/"$1'_credentials.txt.gpg' -r 1D65D7079BA8560C -r A8D94288FBC3B3AB -r 2614802205808E10 -r 05431C1FC47B97F5 -r 0A279E082B64B3CA -r C1983031ABC56AB1 -r A5C77224F7958C93  '/tmp/'$1'_credentials.txt'
       rm /tmp/*_credentials.txt
 }
 
