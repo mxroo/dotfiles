@@ -6,7 +6,8 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 " This makes vim pretty colors
-Plugin 'altercation/vim-colors-solarized'
+" Plugin 'altercation/vim-colors-solarized'
+colorscheme solarized8_dark
 "Filebrowser for Vim
 Plugin 'scrooloose/nerdtree'
 "fuzzy file finder

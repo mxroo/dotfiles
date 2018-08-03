@@ -36,3 +36,10 @@ function me() {
     echo "hextile" | ssvncviewer -scale .8 -autopass -encodings "zywrle tight hextile copyrect" B1RNML2 &> /dev/null &
 }
 export TERM=xterm-256color
+
+alias gam="/home/jessie/bin/gam/gam"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+gam() { "/home/jessie/bin/gam/gam" "$@" ; }
