@@ -37,9 +37,9 @@ function me() {
 }
 export TERM=xterm-256color
 
-alias gam="/home/jessie/bin/gam/gam"
+alias gam="/home/jamila/bin/gam/gam"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-gam() { "/home/jessie/bin/gam/gam" "$@" ; }
+gam() { "/home/jamila/bin/gam/gam" "$@" ; }

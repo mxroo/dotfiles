@@ -2,4 +2,4 @@
 VNC_EXECUTABLE="ssvncviewer";
 RDP_EXECUTABLE="xfreerdp";
 REMOTE_SHELL_EXECUTABLE="winexe"
-CREDS_PATH="/home/jessie/ownCloud/Palante Tech Shared/Credentials"
+CREDS_PATH="/home/jamila/ownCloud/Palante Tech Shared/Credentials"

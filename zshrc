@@ -4,7 +4,7 @@ zstyle ':completion:*' list-colors ''
 zstyle ':completion:*' matcher-list '' 'm:{[:lower:][:upper:]}={[:upper:][:lower:]}' 'r:|[._-`'\'',.]=** r:|=**' 'l:|=* r:|=*'
 zstyle ':completion:*' original true
 zstyle ':completion:*' verbose true
-zstyle :compinstall filename '/home/jessie/.zshrc'
+zstyle :compinstall filename '/home/jamila/.zshrc'
 
 autoload -Uz compinit
 compinit
@@ -133,7 +133,7 @@ function git_prompt_string() {
 PROMPT='%{$fg_bold[yellow]%}%n%{$reset_color%}@%{$fg_bold[magenta]%}%m %{$fg_bold[blue]%}%4~%{$reset_color%} $(git_prompt_string)$(virtualenv_info)%# '
 RPROMPT="%* [%{$fg_no_bold[yellow]%}%?%{$reset_color%}]"
 
-export PATH="/home/jessie/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin/:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl:/root/.gem/ruby/2.5.0/bin"
+export PATH="/home/jamila/bin:/usr/local/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin/:/sbin:/bin:/usr/games:/usr/local/games:/usr/bin/vendor_perl:/usr/bin/core_perl:/root/.gem/ruby/2.5.0/bin"
 # export MANPATH="/usr/local/man:$MANPATH"
 PATH="$(ruby -e 'print Gem.user_dir')/bin:$PATH"
 # You may need to manually set your language environment
